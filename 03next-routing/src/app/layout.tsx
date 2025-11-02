@@ -1,3 +1,5 @@
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 import "./globals.css";
 export default function RootLayout({
   children,
@@ -6,7 +8,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body cz-shortcut-listen="true">{children}</body>
+      <body cz-shortcut-listen="true">
+        <Navbar />
+        {children}
+        <Footer />
+      </body>
     </html>
   );
 }
