@@ -1,7 +1,10 @@
 "use client";
 import FeaturedCourses from "@/components/modules/FeaturedCourses";
+import { CardHoverEffectDemo } from "@/components/modules/FeaturesCard";
 import MusicSchoolTestimonials from "@/components/modules/InfiniteMovingCardsDemo";
+import Instructors from "@/components/modules/ToolTip";
 import { StickyScrollRevealDemo } from "@/components/modules/WhyChooseUs";
+import { AnimatedTooltip } from "@/components/ui/animated-tooltip";
 import { Button } from "@/components/ui/moving-border";
 import { Spotlight } from "@/components/ui/SpotLight";
 import Link from "next/link";
@@ -38,6 +41,8 @@ export default function HeroSection() {
       <FeaturedCourses />
       <StickyScrollRevealDemo />
       <MusicSchoolTestimonials />
+      <CardHoverEffectDemo />
+      <Instructors />
     </>
   );
 }

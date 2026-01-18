@@ -1,5 +1,6 @@
 "use client";
 
+import { cn } from "@/lib/utils";
 import { InfiniteMovingCards } from "../ui/infinite-moving-cards";
 
 const musicSchoolTestimonials = [
@@ -38,15 +39,24 @@ const musicSchoolTestimonials = [
 function MusicSchoolTestimonials() {
   return (
     <div className="h-[40rem] w-full dark:bg-black dark:bg-grid-white/[0.2] relative flex flex-col items-center justify-center overflow-hidden">
+      <div
+        className={cn(
+          "absolute inset-0",
+          "[background-size:20px_20px]",
+          "[background-image:radial-gradient(#d4d4d4_1px,transparent_1px)]",
+          "dark:[background-image:radial-gradient(#404040_1px,transparent_1px)]",
+        )}
+      />
       <h2 className="text-3xl font-bold text-center mb-8 z-10">
         Hear our Harmony: Voices of success
       </h2>
       <div className="flex justify-center w-full overflow-hidden px-4 sm:px-6 lg:px-8">
         <div className="w-full max-w-6xl">
+          <InfiniteMovingCards items={musicSchoolTestimonials} />
           <InfiniteMovingCards
             items={musicSchoolTestimonials}
             direction="right"
-            speed="slow"
+            speed="fast"
           />
         </div>
       </div>
